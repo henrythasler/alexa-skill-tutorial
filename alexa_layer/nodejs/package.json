@@ -1,0 +1,19 @@
+{
+  "name": "alexa_layer",
+  "version": "1.0.0",
+  "description": "Lambda-Layer for Alexa-Skill development",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/henrythasler/alexa-skill-tutorial.git"
+  },
+  "author": "Henry Thasler",
+  "license": "MIT",
+  "dependencies": {
+    "ask-sdk-core": "^2.10.1",
+    "ask-sdk-model": "^1.34.1"
+  }
+}

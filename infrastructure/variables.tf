@@ -1,7 +1,11 @@
 variable "region" {
-  default = "eu-central-1"
+  default = "eu-west-1"
 }
 
-variable "vpc-name" {
+variable "vpc_name" {
   default = "alexa"
+}
+
+variable "skill_id" {
+  default = "amzn1.ask.skill.your-skill-id-goes-here"
 }
