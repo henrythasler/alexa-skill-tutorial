@@ -36,8 +36,24 @@ This tutorial assumes that you have all this set up and ready.
 5. The new skill will then be created within a few seconds. After completion, the skill-dashboard is shown. There should be some green checkmarks when everything went well. 
 ![](docs/skill_dashboard.png)
 
-6. Go to the `Endpoint` page. Copy the Skill ID to `infrastructure/variables.tf` (variable `skill_id`).
+6. Go to `Invocation` and choose a Skill Invocation Name. Press `Save Model` and `Build Model` when done.
+![](docs/skill_invocation.png)
+
+7. Go to the `Endpoint` page. Copy the Skill ID to `infrastructure/variables.tf` (variable `skill_id`).
 ![](docs/skill_id.png)
+
+### Deploy Lambda Function
+
+1. Open a terminal and change into the `infrastructure` folder. Execute `terraform apply` to set up all the components on AWS.
+2. Open up your AWS console (the web-interface...) and check that the lambda-function was set up correctly.
+![](docs/lambda_functions.png)
+3. Open up the details page and copy the ARN shown in the top right corner.
+![](docs/lambda_details.png)
+4. Go back to the `Endpoint` page in your [Alexa Developer Console](https://developer.amazon.com/alexa/console/ask) and paste the Lambda-ARN into the `Default Region` field. Do not forget to `Save Endpoints`!
+![](docs/skill_arn.png)
+
+### Testing
+
 
 ## References
 

@@ -6,7 +6,7 @@
   "scripts": {
     "build": "tsc",
     "predeploy": "rm -rf ./dist/* && tsc && zip -j ./dist/lambda_function.zip ./dist/*.js* && cd alexa_layer/nodejs && npm i && cd .. && zip -qr ../dist/alexa_layer.zip nodejs",
-    "deploy": "aws lambda update-function-code --function-name alexa-skill-tutorial --zip-file fileb://dist/lambda_function.zip",
+    "deploy": "aws --region eu-west-1 lambda update-function-code --function-name alexa-skill-tutorial --zip-file fileb://dist/lambda_function.zip",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
