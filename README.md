@@ -26,7 +26,18 @@ This tutorial assumes that you have all this set up and ready.
 
 ### Create a new Alexa skill
 
-- copy the Skill ID to ``
+1. Log in to your [Alexa Developer Console](https://developer.amazon.com/alexa/console/ask)
+2. Create a new Skill
+![](docs/alexa_console.png)
+3. Enter a name and select a language. Make sure to set `Model` to `Custom` and `Host` to `Provision your own` and press `Create Skill`.
+![](docs/create_skill.png)
+4. When promted for a template, choose `Start from Scratch`.
+![](docs/choose_template.png)
+5. The new skill will then be created within a few seconds. After completion, the skill-dashboard is shown. There should be some green checkmarks when everything went well. 
+![](docs/skill_dashboard.png)
+
+6. Go to the `Endpoint` page. Copy the Skill ID to `infrastructure/variables.tf` (variable `skill_id`).
+![](docs/skill_id.png)
 
 ## References
 

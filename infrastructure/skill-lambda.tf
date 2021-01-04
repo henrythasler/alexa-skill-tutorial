@@ -39,12 +39,13 @@ resource "aws_lambda_function" "tutorial_lambda" {
   runtime       = "nodejs12.x"
   handler       = "index.handler"
 
-  layers = [aws_lambda_layer_version.lambda_layer.arn]
+  layers        = [aws_lambda_layer_version.lambda_layer.arn]
 }
 
 resource "aws_lambda_permission" "with_alexa" {
-  statement_id  = "AllowExecutionFromAlexa"
-  action        = "lambda:InvokeFunction"
-  function_name = aws_lambda_function.tutorial_lambda.function_name
-  principal     = "alexa-appkit.amazon.com"
+  statement_id      = "AllowExecutionFromAlexa"
+  action            = "lambda:InvokeFunction"
+  function_name     = aws_lambda_function.tutorial_lambda.function_name
+  principal         = "alexa-appkit.amazon.com"
+  event_source_token = var.skill_id
 }
