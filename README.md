@@ -29,6 +29,7 @@ This tutorial assumes that you have all this set up and ready to use.
 ## Terraform Initialization
 
 - in `infrastructure/state.tf`: change the values according to your setup to use [another (remote) backend](https://www.terraform.io/docs/backends/index.html) or remove this file if you want to keep the terraform state locally.
+- in `infrastructure/variables.tf`: change the `region` if needed. Please note, that no all regions can host Alexa Lambda functions. Refer to [Select the optimal region for your AWS Lambda function](https://developer.amazon.com/en-US/docs/alexa/custom-skills/host-a-custom-skill-as-an-aws-lambda-function.html#select-the-optimal-region-for-your-aws-lambda-function) for details.
 - in folder `./infrastructure`: run `terraform init` to set up the required modules.
 
 ## Create a new Alexa skill
